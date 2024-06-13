@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="winter">
+<head>
+    <meta charset="UTF-8">
+    <title>Comfy Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRyybYIc5V1nDdN9/WIN6eZx5p5UL5RvbfLf5HTC1" crossorigin="anonymous"></script>
+    <script src="script.js"></script> 
+
+</head>
+<body>
+    <div id="root">
+        <section class="h-screen igrid place-items-center">
+            <form id="loginForm" class="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4" data-url="/login">
+                <h4 class="text-center text-3xl font-bold">Login</h4>
+                <div class="form-control">
+                    <label for="identifier" class="label">
+                        <span class="label-text capitalize">email</span>
+                    </label>
+                    <input type="email" name="identifier" class="input" value="">
+                </div>
+                <div class="form-control">
+                    <label for="password" class="label">
+                        <span class="label-text capitalize">password</span>
+                    </label>
+                    <input type="password" name="password" class="input" value="">
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary btn-block">login</button>
+                </div>
+                <button type="button" id="guestUserBtn" class="btn btn-secondary btn-block">guest user</button>
+                <p class="text-center">Not a member yet?
+                    <a id="registerLink" class="ml-2 link link-hover link-primary capitalize" href="/register.html">register</a>
+                </p>
+            
+            </form>
+        </section>
+        <div class="Toastify"></div>
+    </div>
+</body>
+</html>
+
+

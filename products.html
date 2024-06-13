@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Products</title>
+    <script src="script.js"></script>
+    <style>
+     
+
+
+
+    </style>
+    
+ 
+</head>  
+<body>
+    <div class="sign-in">
+        <div class="account">
+         <a class="guest" href="login.html">Sign in / Guest</a>
+         <a class="create" href="register.html">Create Account</a>
+        </div>
+    
+    </div>
+
+     <!-- header  -->
+     <header>
+        <nav class="container">
+            <div class="logo">
+                <p>c</p>
+            </div>
+
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="bar"><a href="about.html">About</a></li> 
+                <li class="bar"><a href="products.html">Product</a></li>
+                <li class="bar"><a href="cart.html">Cart</a></li>
+            </ul>
+            <div class="img">
+              <i class="fa-solid fa-sun sun"></i>
+              <img class="car" src="images/cart.svg" alt=""><span class="zero">0</span>
+            </div>
+            </nav>
+            <!-- Mobile nav  -->
+        <div class="mobile-menu-icon">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+ 
+         <nav class="mobile-nav slide container" style="margin-top: 100px;">
+             <a class="zoom" href="index.html">Home</a>
+             <a class="zoom" href="about.html">About</a>
+             <a class="zoom"  href="products.html">Product</a>
+             <a class="zoom"  href="cart.html">Cart</a>
+         </nav>
+         <div class="imga">
+             <i class="fa-solid fa-sun sun sunma"></i>
+             <img class="car" src="images/cart.svg" alt=""><span class="zero">0</span>
+           </div>
+     </header>
+
+     <section class="align-element py-20">
+      <form method="get" action="/products.html?search=products" class="bg-base-200 rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+          <div class="form-control">
+              <label for="search" class="label">
+                  <span class="label-text capitalize">search product</span>
+              </label>
+              <input type="search" name="search" class="input input-bordered input-sm" value="">
+          </div>
+          <div class="form-control">
+              <label for="category" class="label">
+                  <span class="label-text capitalize">select category</span>
+              </label>
+              <select name="category" id="category" class="select select-bordered select-sm">
+                  <option value="all">all</option>
+                  <option value="Tables">Tables</option>
+                  <option value="Chairs">Chairs</option>
+                  <option value="Kids">Kids</option>
+                  <option value="Sofas">Sofas</option>
+                  <option value="Beds">Beds</option>
+              </select>
+          </div>
+          <div class="form-control">
+              <label for="company" class="label">
+                  <span class="label-text capitalize">select company</span>
+              </label>
+              <select name="company" id="company" class="select select-bordered select-sm">
+                  <option value="all">all</option>
+                  <option value="Modenza">Modenza</option>
+                  <option value="Luxora">Luxora</option>
+                  <option value="Artifex">Artifex</option>
+                  <option value="Comfora">Comfora</option>
+                  <option value="Homestead">Homestead</option>
+              </select>
+          </div>
+          <div class="form-control">
+              <label for="order" class="label">
+                  <span class="label-text capitalize">sort by</span>
+              </label>
+              <select name="order" id="order" class="select select-bordered select-sm">
+                  <option value="a-z">a-z</option>
+                  <option value="z-a">z-a</option>
+                  <option value="high">high</option>
+                  <option value="low">low</option>
+              </select>
+          </div>
+          <div class="form-control">
+              <label for="price" class="label cursor-pointer">
+                  <span class="label-text capitalize">select price</span>
+                  <span>$1,000.00</span>
+              </label>
+              <input type="range" name="price" min="0" max="100000" class="range range-primary range-sm" step="1000" value="100000">
+              <div class="w-full flex justify-between text-xs px-2 mt-2">
+                  <span class="font-bold text-md">0</span>
+                  <span class="font-bold text-md">Max : $1,000.00</span>
+              </div>
+          </div>
+          <div class="form-control items-center">
+              <label for="shipping" class="label cursor-pointer">
+                  <span class="label-text capitalize">free shipping</span>
+              </label>
+              <input type="checkbox" name="shipping" class="checkbox checkbox-primary checkbox-sm" checked>
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm">search</button>
+          <a class="btn btn-accent btn-sm" href="/products.html">reset</a>
+      </form>
+      <div class="flex justify-between items-center mt-8 border-b border-base-300 pb-5">
+          <h4 class="font-medium text-md"><span id="cardCount"></span>&nbsp;products</h4>
+          <div class="flex gap-x-2">
+              <button type="button" class="text-xl btn btn-circle btn-sm btn-primary text-primary-content">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3z"></path>
+                  </svg>
+              </button>
+              <button type="button" class="text-xl btn btn-circle btn-sm btn-ghost text-based-content">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                  </svg>
+              </button>
+          </div>
+      </div> 
+      
+      <div class="pt-12 gap-4 md:grid-cols-2 lg:grid-cols-3" > 
+ 
+ 
+      <div class="grid pt-12 gap-4 md:grid-cols-2 lg:grid-cols-3" id="product-grid" >
+        <!-- Product cards will be dynamically added here -->
+       
+    </div>
+
+
+
+
+
+
+      <div class="mt-16 flex justify-end">
+          <div class="join">
+      
+              <button class="pagination-button btn btn-xs sm:btn-md join-item" id="prevBtn">&lt; Prev</button>
+              <button class="pagination-button btn btn-xs sm:btn-md join-item" id="nextBtn">Next &gt;</button>
+          </div>
+      </div>
+  </section>
+
+
+  
+
+
+
+
+
+
+
+
+  <div class="Toastify"></div>
+  </div>
+</body></html>
+
+
+
+
+
